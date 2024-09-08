@@ -4,7 +4,7 @@ import Image from 'next/image';
 import axios from 'axios';
 import { useState } from 'react';
 import { BsSearch } from 'react-icons/bs';
-import WeatherDetails from './components/WeatherDetails';
+import WeatherDetails from '../components/WeatherDetails';
 // import Spinner from '../components/Spinner';
 
 export default function Home() {
@@ -35,9 +35,10 @@ export default function Home() {
 
         {/* Search */}
         <div className='relative flex justify-between items-center  bg-[#252525] w-full m-auto pt-4 px-4 text-neutral-200 z-10'>
+          <div className="font-bold text-2xl p-5"> Weather</div>
           <form
             onSubmit={fetchWeather}
-            className='flex justify-between items-center w-1/2 mb-4 m-auto p-3 bg-transparent border border-white text-neutrail-300 rounded-2xl'
+            className='flex justify-between items-center w-[40rem] lg:w-1/2 mb-4 m-auto p-3 bg-transparent border border-white text-neutrail-300 rounded-2xl'
           >
             <div>
               <input
